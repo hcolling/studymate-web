@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { handleCallback, hasSession, signIn, signOut } from './auth'
 import { createSet, getMaterial, getSet, getUploadUrl, listSets, uploadPdf } from './api'
 import type { MaterialResponse, StudySet } from './types'
+import GroupsPanel from './GroupsPanel'
+import './groups.css'
 
 function formatBytes(n: number|null) { return n == null ? '—' : `${(n/1024).toFixed(1)} KB` }
 function isWorking(s: StudySet) { return !['READY','FAILED'].includes(s.status) }
@@ -162,6 +164,10 @@ useEffect(() => {
               <button className="primary" type="submit" disabled={!file || !title.trim() || uploading}>{uploading ? 'Uploading...' : 'Create and upload'}</button>
             </form>
           </div>
+          <GroupsPanel
+            ownedSets={sets}
+            onOpenSet={s => void chooseSet(s)}
+          />
         </aside>
         <section className="main-content">
           {error && <div className="error" role="alert">{error}</div>}

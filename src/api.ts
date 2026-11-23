@@ -1,7 +1,7 @@
 import { accessToken } from './auth'
 import type { MaterialResponse, StudySet, UploadUrl } from './types'
 const base = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')
-async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
+export async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   if (!base.startsWith('https://')) throw new Error('Configure VITE_API_BASE_URL in .env.local')
   const token = await accessToken()
   if (!token) throw new Error('Your session expired. Please sign in again.')

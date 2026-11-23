@@ -13,6 +13,7 @@ export interface StudySet {
   errorMessage: string|null
   createdAt: string
   updatedAt: string
+  sharedGroupId?: string|null
 }
 export interface Flashcard { question: string; answer: string; page: number }
 export interface Quiz { question: string; options: string[]; correctIndex: number; explanation: string; page: number }

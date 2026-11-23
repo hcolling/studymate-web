@@ -1,0 +1,10 @@
+.groups-panel { margin-top: 16px; }
+.groups-panel form { margin-top: 14px; }
+.groups-panel select { width: 100%; padding: 10px; border: 1px solid #8a919c; border-radius: 8px; background: transparent; color: inherit; }
+.groups-panel .copy-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.groups-panel .copy-row code { font-size: 11px; overflow-wrap: anywhere; flex: 1; }
+.groups-panel .group-choice { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.groups-panel .group-details { margin-top: 12px; border-top: 1px solid #8a919c55; padding-top: 12px; }
+.groups-panel .group-details h3 { margin-top: 14px; }
+.groups-panel .member-line, .groups-panel .shared-set-line { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 6px; margin: 8px 0; }
+.groups-panel .member-line code { font-size: 11px; }
