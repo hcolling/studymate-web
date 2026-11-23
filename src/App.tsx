@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { accessToken, handleCallback, hasSession, signIn, signOut } from './auth'
+import { handleCallback, hasSession, signIn, signOut } from './auth'
 import { createSet, getMaterial, getSet, getUploadUrl, listSets, uploadPdf } from './api'
 import type { MaterialResponse, StudySet } from './types'
 
